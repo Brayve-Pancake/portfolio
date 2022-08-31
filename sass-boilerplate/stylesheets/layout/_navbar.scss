@@ -1,3 +1,13 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+.navbar {
+  width: 100vw;
+  background: linear-gradient(
+    0.25turn,
+    $pallet-color-0,
+    $pallet-color-1,
+    $pallet-color-2
+  );
+}
