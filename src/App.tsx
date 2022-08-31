@@ -6,6 +6,75 @@ function App() {
     <div className="App">
       <Navbar />
       hello
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
+      <div id="anchor1" className="element">
+        test 7 (anchor)
+      </div>
+      <div id="anchor" className="element">
+        test 6 (anchor)
+      </div>
       <Footer />
     </div>
   );
