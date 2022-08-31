@@ -1,12 +1,14 @@
 import { useState } from "react";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
+import { Turn as Hamburger } from "hamburger-react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
+    console.log("toggled");
   };
 
   const handleClickAway = () => {
@@ -17,9 +19,7 @@ export default function Navbar() {
     <div className="navbar">
       <ClickAwayListener onClickAway={handleClickAway}>
         <div className="navbar-container">
-          <button className="button" onClick={handleToggle}>
-            ☰
-          </button>
+          <Hamburger toggled={open} toggle={setOpen} />
           {open && (
             <div className="dropdown">
               <ul>
