@@ -12,7 +12,9 @@
 @import "base/base", "base/fonts", "base/typography", "base/helpers";
 
 // 4. Layout-related sections
-@import "layout/navbar", "layout/footer", "layout/app", "layout/intro";
+@import "layout/navbar", "layout/footer", "layout/app", "layout/intro",
+  "layout/about", "layout/skills", "layout/myBuilds", "layout/testamonials",
+  "layout/contact";
 
 // 5. Components
 @import "components/button";
