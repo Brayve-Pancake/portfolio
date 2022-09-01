@@ -1,11 +1,12 @@
 import "../sass-boilerplate/stylesheets/main.scss";
-import { Footer, Navbar } from "./components/index";
+import { Footer, Intro, Navbar } from "./components/index";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      hello
+      App
+      <Intro />
       <div id="anchor" className="element">
         test 6 (anchor)
       </div>
