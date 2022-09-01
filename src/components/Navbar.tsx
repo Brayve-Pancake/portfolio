@@ -9,7 +9,6 @@ export default function Navbar() {
 
   const handleToggle = () => {
     setOpen((prevOpen) => !prevOpen);
-    console.log("toggled");
   };
 
   const handleClickAway = () => {
@@ -95,35 +94,6 @@ export default function Navbar() {
                   </li>
                 </ul>
               </div>
-              {/* <div className="dropdown">
-                <ul>
-                  <li>
-                    <Link
-                      className="test6"
-                      // to takes the navbar to an ID
-                      to="anchor1"
-                      spy={true}
-                      smooth={true}
-                      duration={500}
-                      onClick={handleToggle}
-                    >
-                      Test 7 (anchor)
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="test6"
-                      to="anchor2"
-                      spy={true}
-                      smooth={true}
-                      duration={500}
-                      onClick={handleToggle}
-                    >
-                      Test 8
-                    </Link>
-                  </li>
-                </ul>
-              </div> */}
             </CSSTransition>
           </div>
         </div>
