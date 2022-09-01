@@ -31,11 +31,68 @@ export default function Navbar() {
               unmountOnExit
             >
               <div className="list-body">
-                <ul className="list">
-                  <li className="list-item">Writing JavaScript</li>
-                  <li className="list-item"> Running</li>
-                  <li className="list-item"> Technical Writing</li>
-                  <li className="list-item"> Writing Clean code</li>
+                <ul>
+                  <li>
+                    <Link
+                      className="test6"
+                      // to takes the navbar to an ID
+                      to="anchor1"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      onClick={handleToggle}
+                    >
+                      Test 7 (anchor)
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="test6"
+                      to="anchor2"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      onClick={handleToggle}
+                    >
+                      Test 8
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="test6"
+                      to="anchor2"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      onClick={handleToggle}
+                    >
+                      Test 8
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="test6"
+                      to="anchor2"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      onClick={handleToggle}
+                    >
+                      Test 8
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="test6"
+                      to="anchor2"
+                      spy={true}
+                      smooth={true}
+                      duration={500}
+                      onClick={handleToggle}
+                    >
+                      Test 8
+                    </Link>
+                  </li>
                 </ul>
               </div>
               {/* <div className="dropdown">
