@@ -31,7 +31,7 @@ export default function Navbar() {
               unmountOnExit
             >
               <div className="list-body">
-                <ul>
+                <ul className="navbar-list">
                   <li>
                     <Link
                       className="test6"

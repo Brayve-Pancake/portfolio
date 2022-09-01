@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      App
       <Intro />
       <div id="anchor" className="element">
         test 6 (anchor)

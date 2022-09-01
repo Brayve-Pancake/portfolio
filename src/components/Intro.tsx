@@ -1,7 +1,7 @@
 export default function Intro() {
   return (
-    <>
-      <p>Hi, I'm Joshua...</p>
-    </>
+    <div className="intro">
+      <p className="intro-text">Hi, I'm Joshua...</p>
+    </div>
   );
 }

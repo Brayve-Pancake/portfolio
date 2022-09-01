@@ -1,11 +1,22 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
-
 .navbar-container {
   position: relative;
   display: inline-block;
 }
+
+.navbar-top {
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 3;
+  background: linear-gradient(
+    0.25turn,
+    $pallet-color-0,
+    $pallet-color-1,
+    $pallet-color-2
+  );
+}
+
 .button {
   padding: 0;
   width: 50px;
@@ -17,20 +28,11 @@
   font-size: 40px;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+// Dropdown Menu
+.navbar-dropdown {
+  position: relative;
+  z-index: 0;
 }
-li {
-  padding: 8px 12px;
-}
-
-li:hover {
-  background-color: rgba(0, 0, 0, 0.14);
-  cursor: pointer;
-}
-
 .list-body {
   position: absolute;
   z-index: 2;
@@ -43,26 +45,20 @@ li:hover {
     $pastel-color-2
   );
 }
-
-.navbar-top {
-  width: 100vw;
-  display: flex;
-  position: relative;
-  z-index: 3;
-  justify-content: flex-end;
-  background: linear-gradient(
-    0.25turn,
-    $pallet-color-0,
-    $pallet-color-1,
-    $pallet-color-2
-  );
+.navbar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navbar-list > li {
+  padding: 8px 12px;
+}
+.navbar-list > li:hover {
+  background-color: rgba(0, 0, 0, 0.14);
+  cursor: pointer;
 }
 
-.navbar-dropdown {
-  position: relative;
-  z-index: 0;
-}
-
+// CSSTransition
 .example-enter {
   opacity: 0;
   transform: translateY(-100%);
