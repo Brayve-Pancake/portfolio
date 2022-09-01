@@ -1,11 +1,24 @@
 import "../sass-boilerplate/stylesheets/main.scss";
-import { Footer, Intro, Navbar } from "./components/index";
+import {
+  About,
+  Footer,
+  Intro,
+  MyBuilds,
+  Navbar,
+  Skills,
+  Testamonials,
+} from "./components/index";
 
 function App() {
   return (
     <div className="App">
       <Navbar />
       <Intro />
+      <About />
+      <Skills />
+      <MyBuilds />
+      <Testamonials />
+      <Skills />
       <div id="anchor" className="element">
         test 6 (anchor)
       </div>
