@@ -1,57 +1,60 @@
+:root {
+  --width: 100vw;
+  --full-width: 100vw;
+
+  @media (min-width: 42em) {
+    --width: 42rem;
+  }
+
+  --angle: -11deg;
+  /*-----------------
+  Magic Number Alert:
+  
+  the 0.09719 is calculated by this formula:
+  tan(11°) / 2
+  11° is the current skewY value.
+  ------------------*/
+  --magic-number: 0.09719;
+  --skew-padding: calc(var(--width) * var(--magic-number));
+  --clip-padding: calc(var(--full-width) * var(--magic-number));
+}
 .intro {
-  // background: $pastel-color-1;
+  background: $pastel-color-1;
+  width: var(--width);
+  transform: skewY(var(--angle));
   // padding: 1em;
 }
 
-// .diagonal-box {
-//   background-image: linear-gradient(45deg, #6303b1, #ff0099);
-//   transform: skewY(-11deg);
-//   position: relative;
-// }
-
-// .content {
-//   max-width: 50em;
-//   margin: 0 auto;
-//   transform: skewY(11deg);
-//   position: relative;
-// }
-
-// .diagonal-box:before {
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   left: 0;
-//   bottom: 0;
-//   background-image: linear-gradient(45deg, #654ea3, #eaafc8);
-//   transform: skewY(-11deg);
-// }
-HTML CSS Result Skip Results Iframe header {
+.diagonal-box {
   position: relative;
-  height: 300px;
-  overflow: hidden;
+  padding: var(--skew-padding) 0;
+  margin-top: -1px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    transform: skewy(var(--angle));
+    transform-origin: 50% 0;
+    outline: 1px solid transparent;
+    backface-visibility: hidden;
+  }
 }
 
-.header__bg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(#ff9d2f, #ff6126);
-  transform: skewY(-6deg);
-  transform-origin: top left;
-}
-
-h1 {
-  margin: 0;
-  padding: 100px 0;
-  font: 44px "Arial";
-  text-align: center;
-}
-
-header h1 {
+.content {
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 1.5em;
   position: relative;
-  color: white;
+  transform: skewy(calc(-1 * var(--angle)));
+
+  /* -----------
+  enable the border to see, that the content
+  perfectly fits into the section withou
+  bleeding into the adjecting areas:
+  ------------ */
+  border: 2px dashed #fff8;
 }
