@@ -1,33 +1,24 @@
-:root {
-  --width: 100vw;
-  --full-width: 100vw;
-
-  @media (min-width: 42em) {
-    --width: 42rem;
-  }
-
-  --angle: -11deg;
-  /*-----------------
-  Magic Number Alert:
-  
-  the 0.09719 is calculated by this formula:
-  tan(11°) / 2
-  11° is the current skewY value.
-  ------------------*/
-  --magic-number: 0.09719;
-  --skew-padding: calc(var(--width) * var(--magic-number));
-  --clip-padding: calc(var(--full-width) * var(--magic-number));
+.intro-container {
+  background: linear-gradient($pastel-color-0, $pastel-color-0);
+  // background: $pastel-color-0;
 }
 .intro {
-  background: $pastel-color-1;
-  width: var(--width);
-  transform: skewY(var(--angle));
-  // padding: 1em;
+  background: linear-gradient($pastel-color-0, $pastel-color-1);
+
+  //   background: transparent;
+  //   background: $pastel-color-0;
 }
 
+.intro-text {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 700;
+}
 .diagonal-box {
   position: relative;
-  padding: var(--skew-padding) 0;
+  width: $width;
+  transform: skewY($angle);
+  padding: $skew-padding 0;
   margin-top: -1px;
 
   &:before {
@@ -37,7 +28,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    transform: skewy(var(--angle));
+    transform: skewy($angle);
     transform-origin: 50% 0;
     outline: 1px solid transparent;
     backface-visibility: hidden;
@@ -45,11 +36,47 @@
 }
 
 .content {
-  max-width: var(--width);
+  max-width: $width;
+  margin: 0 auto;
+  padding: 1em;
+  position: relative;
+  transform: skewy(-$angle);
+
+  /* -----------
+  enable the border to see, that the content
+  perfectly fits into the section withou
+  bleeding into the adjecting areas:
+  ------------ */
+  border: 2px dashed #fff8;
+}
+
+.diagonal-box-normal {
+  position: relative;
+  width: $width;
+  // transform: skewY(-$angle);
+  padding: $skew-padding 0;
+  margin-top: -1px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    // transform: skewy($angle);
+    transform-origin: 50% 0;
+    outline: 1px solid transparent;
+    backface-visibility: hidden;
+  }
+}
+
+.content-normal {
+  max-width: $width;
   margin: 0 auto;
   padding: 1.5em;
   position: relative;
-  transform: skewy(calc(-1 * var(--angle)));
+  // transform: skewy(-$angle);
 
   /* -----------
   enable the border to see, that the content

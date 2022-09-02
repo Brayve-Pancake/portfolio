@@ -34,27 +34,27 @@ $dark-grey: rgb(68, 68, 68) !default;
 
 /// Analagous Palette 0
 /// @type Color
-$pastel-color-0: #d8f2ff;
+$pastel-color-0: #ccffcc;
 
 /// Analagous Palette 1
 /// @type Color
-$pastel-color-1: #d8dfff;
+$pastel-color-1: #ccccff;
 
 /// Analagous Palette 2
 /// @type Color
-$pastel-color-2: #d8fff9;
+$pastel-color-2: #ffcccc;
 
 /// Analagous Palette 0
 /// @type Color
-$pallet-color-0: #9966ff;
+$pallet-color-0: #0f8950;
 
 /// Analagous Palette 1
 /// @type Color
-$pallet-color-1: #e666ff;
+$pallet-color-1: #0f8950;
 
 /// Analagous Palette 2
 /// @type Color
-$pallet-color-2: #6680ff;
+$pallet-color-2: #0f8950;
 
 /// Container's maximum width
 /// @type Length
@@ -69,8 +69,23 @@ $breakpoints: (
   "large": 1024px,
 ) !default;
 
-/// Relative or absolute URL where all assets are served from
-/// @type String
-/// @example scss - When using a CDN
-///   $base-url: 'https://cdn.example.com/assets/';
-$base-url: "/assets/" !default;
+// /// Relative or absolute URL where all assets are served from
+// /// @type String
+// /// @example scss - When using a CDN
+// ///   $base-url: 'https://cdn.example.com/assets/';
+// $base-url: "/assets/" !default;
+
+// Used for transformation of background
+$width: 100vw;
+$full-width: 100vw;
+$angle: -11deg;
+
+// Magic Number Alert:
+
+// the 0.09719 is calculated by this formula:
+// tan(11°) / 2
+// 11° is the current skewY value.
+
+$magic-number: 0.09719;
+$skew-padding: $width * $magic-number;
+$clip-padding: $full-width * $magic-number;
